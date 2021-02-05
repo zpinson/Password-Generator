@@ -21,14 +21,39 @@ var userSpecial = confirm('Do you want special caracters in your password?');
 console.log(userSpecial);
 var userLength = prompt('how many caracters you want in your password? (Chose between 8 and 128)');
 console.log(userLength);
+
+
+
 // Write password to the #password input
 function writePassword() {
 //   var password = generatePassword();
   if(userUpper === true && userNumbers === true && userSpecial === true){
       var fullArray = alphabet.concat(alphabetUpper, specialCaracters, numbers);
+  }else if (userUpper === true && userNumbers === true && userSpecial != true ){
+    var fullArray = alphabet.concat(alphabetUpper, numbers);
+  }else if (userUpper === true && userNumbers != true && userSpecial != true ){
+    var fullArray = alphabet.concat(alphabetUpper);
+  }else if (userUpper === true && userNumbers != true && userSpecial === true ){
+    var fullArray = alphabet.concat(alphabetUpper, specialCaracters);
+  }else if (userUpper != true && userNumbers === true && userSpecial === true ){
+    var fullArray = alphabet.concat(numbers, specialCaracters);
+  }else if (userUpper != true && userNumbers === true && userSpecial != true ){
+    var fullArray = alphabet.concat(numbers);
+  }else if (userUpper != true && userNumbers != true && userSpecial === true ){
+    var fullArray = alphabet.concat(specialCaracters);
   }
-  console.log(fullArray)
+  console.log(fullArray);
+
+  for (var i = 0; i < userLength.value; i++) {
+      var randomItem =  fullArray[Math.floor(Math.random() * fullArray.length)];
+    }
+    
+    console.log(randomItem);
   
+
+
+ 
+ 
   
   var passwordText = document.querySelector("#password");
 
@@ -38,8 +63,6 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
 
 
 
