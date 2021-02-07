@@ -17,11 +17,14 @@ console.log(numbers);
 var specialCaracters = "!#$'%&()*+,-./:;<=>?@][^_`{|}~".split(""); 
 console.log(specialCaracters);
 
-//variable that will receive the random carracters to be the password
-var password = []; 
+
+
 
 // Write password to the #password input
 function writePassword() {
+
+//variable that will receive the random carracters to be the password
+var password = []; 
 
 // asks how many charater the password should be
   var userImput = prompt(
