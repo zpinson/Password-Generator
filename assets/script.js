@@ -14,7 +14,7 @@ var numbers = "0123456789".split("");
 console.log(numbers);
 
 //variable holding all the special characters as an array
-var specialCaracters = "!#$%&()*+,-./:;<=>?@][^_`{|}~".split(""); 
+var specialCaracters = "!#$'%&()*+,-./:;<=>?@][^_`{|}~".split(""); 
 console.log(specialCaracters);
 
 //variable that will receive the random carracters to be the password
